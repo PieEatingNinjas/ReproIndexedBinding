@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ReproductionIndexProperty"
+             x:Class="ReproductionIndexProperty.MainPage">
+    <!-- x:DataType="local:MainPage" -->
+    
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                x:DataType="{x:Null}"
+                Text="{Binding ClassWithIndexProperty[foo]}"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            
+            <!-- <Label -->
+            <!--     x:DataType="{x:Null}" -->
+            <!--     Text="{Binding ClassWithIndexProperty[foo]}" -->
+            <!--     Style="{StaticResource Headline}" -->
+            <!--     SemanticProperties.HeadingLevel="Level1" /> -->
+            
+            <Button
+                Text="Click me" 
+                Clicked="Button_Clicked"
+                HorizontalOptions="Fill" />
+            
+              
+            <Button
+                Text="Click me 2" 
+                Clicked="Button_Clicked2"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
